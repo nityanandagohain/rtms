@@ -10,8 +10,11 @@ For simpilicty we are not considering having historical messages and persistance
 3. Users can send messages if they want.
 
 ## Implementation details
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/26831659/121815611-fd30ec00-cc94-11eb-8c44-ce0fd7287dba.png" width="300">
+</p>
 
-1. Our backend servers will connect to redis cluster and use the pub sub feature of redis. Redis cluster supports high performance and scalability of upto 1000 nodes. More on https://redis.io/topics/cluster-spec
+1. Our backend servers will connect to redis cluster and use the pub/sub feature of redis. Redis cluster supports high performance and scalability of upto 1000 nodes. More on https://redis.io/topics/cluster-spec
 
 2. Backend servers will keep a persistant HTTP connection with the clients and send new messages vis SSE. We are not going ahead with websockets right now for simplicity reasons.
 
